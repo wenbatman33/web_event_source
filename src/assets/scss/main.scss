@@ -1,0 +1,95 @@
+@import '../css/reset.css';
+@import '../css/tailwind.css';
+
+.container {
+	margin: 0 auto;
+}
+h1 {
+	// 40px
+	font-size: 2.5em !important;
+	font-weight: bold !important;
+}
+h2 {
+	// 40px
+	font-size: 2.5em !important;
+	font-weight: bold !important;
+}
+h3 {
+	// 36px
+	font-size: 2.25em !important;
+	font-weight: bold !important;
+}
+h4 {
+	// 36px
+	font-size: 2.25em !important;
+	font-weight: bold !important;
+}
+h5 {
+	// 24px
+	font-size: 1.5em !important;
+	font-weight: bold !important;
+}
+h6 {
+	// 24px
+	font-size: 1.5em !important;
+	font-weight: bold !important;
+}
+header,
+footer {
+	width: 100vw;
+	background: linear-gradient(to right, #9f0102 0%, #cb3c00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-size: 100vw auto;
+	position: relative;
+	z-index: 11;
+	&::before {
+		content: '';
+		display: block;
+		background: linear-gradient(270deg, rgba(200, 163, 90, 0), #ffc450 15%, #fff 50%, #ffc450 85%, rgba(200, 163, 90, 0)) no-repeat center center;
+		background-size: 100vw auto;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+	}
+	.container {
+		width: 90%;
+	}
+}
+header {
+	height: 85px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.btn {
+		margin: 0;
+		padding: 8px 42px;
+		border: 1px solid;
+		border-radius: 4px;
+		font-weight: 600;
+		font-size: 14px;
+		text-align: center;
+		cursor: pointer;
+		color: white;
+		text-decoration: none;
+		outline: none;
+		transition: 0.3s ease;
+		background: transparent;
+		line-height: 1;
+		.btn {
+			margin-left: 1em;
+		}
+		&:hover {
+			border-color: white;
+			background: rgba(255, 255, 255, 0.4);
+		}
+		&.pure-btn {
+			background: transparent;
+			border: 0;
+			padding: 0;
+		}
+	}
+}
