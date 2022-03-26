@@ -8,6 +8,11 @@ import pkg from './package.json';
 export default ( { mode } ) => {
 	process.env = { ...process.env, ...loadEnv( mode, process.cwd() ) };
 	return defineConfig( {
+		server: {
+			port: 8888,
+			open: true,
+			proxy: {},
+		},
 		plugins: [
 			vue(),
 			createHtmlPlugin( {
@@ -15,7 +20,7 @@ export default ( { mode } ) => {
 					data: {
 						ver: pkg.version,
 						buildTime: dayjs().format( 'YYYYMMDDHHmmss' ),
-						// 可以環境注入 script
+						// 可以依環境注入 script
 						// injectScript: process.env.VITE_MODE === 'production'?'':'',
 						injectScript: `<script></script>`,
 					},
@@ -32,10 +37,11 @@ export default ( { mode } ) => {
 		build: {
 			rollupOptions: {
 				input: {
-					main: resolve( __dirname, 'index.html' ),
-					// 樣本----------------------/campaigns/活動名稱/------------
+					// main: resolve( __dirname, 'index.html' ),
+					// 樣本----------------------/campaigns/活動名稱/----------------
 					_blank: resolve( __dirname, '/campaigns/_blank/index.html' ),
-					demo_1: resolve( __dirname, '/campaigns/demo_1/index.html' ),
+					// ------------------------------------------------------------
+					stunner2020: resolve( __dirname, '/campaigns/stunner2020/index.html' ),
 				},
 			}
 		}

@@ -1,0 +1,38 @@
+{
+    "memberUrl": [
+        {
+            "name": "memberUrl",
+            "url": "http://sso-d.182ga.com:21080"
+        }
+    ],
+    "pcUrl": [
+        {
+            "name": "pcUrl",
+            "url": "http://w3-d.182ga.com:21080"
+        }
+    ],
+    "h5Url": [
+        {
+            "name": "h5Url",
+            "url": "http://m2-d.182ga.com:21080"
+        }
+    ],
+    "api": [
+        {
+            "name": "api",
+            "url": "http://35.220.154.121:20100"
+        }
+    ],
+    "candy": [
+        {
+            "name": "candy",
+            "url": "https://secure.livechatinc.com/licence/8233741/v2/open_chat.cgi?groups=14&name="
+        }
+    ],
+    "apiImg": [
+        {
+            "name": "apiImg",
+            "url": "https://storage.googleapis.com/gcs-luck2-stg-static/storage/"
+        }
+    ]
+}

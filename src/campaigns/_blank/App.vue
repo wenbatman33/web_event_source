@@ -1,13 +1,17 @@
-<script setup>
-</script>
+<template lang="pug">
+.main
+	AppHeader
+	.min-h-screen
+		.container
+			h1 _blank
 
-<template>
-  <header>
-
-    <h1>_blank</h1>
-  </header>
-
+	GlobalLoading
 </template>
 
-<style>
-</style>
+<script setup>
+	import AppHeader from '@/components/AppHeader.vue';
+
+	import GlobalLoading from '@/components/GlobalLoading/index.vue';
+</script>
+
+<style></style>

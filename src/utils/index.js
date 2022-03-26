@@ -33,6 +33,10 @@ export function gotoCommonRegister () { }
 export const setLoginData = (data) => window.localStorage.setItem('LOGIN_INFO', JSON.stringify(data));
 export const getLoginData = () => (window?.localStorage?.LOGIN_INFO && JSON.parse(window?.localStorage?.LOGIN_INFO)) || undefined;
 
+export function getToken() {
+	const data = getLoginData();
+	return data ? data.token : undefined;
+}
 
 export function setToken(token) {
 	const data = getLoginData();
@@ -41,7 +45,8 @@ export function setToken(token) {
 	window.localStorage.setItem('LOGIN_INFO', JSON.stringify(newData));
 }
 
-export function cleanLocalStorage() {
+export function logOut() {
 	window.localStorage.removeItem('LOGIN_INFO');
 	window.localStorage.removeItem('USER_INFO');
+	window.location.reload();
 }

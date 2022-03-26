@@ -1,8 +1,4 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from '@/campaigns/_blank/App.vue'
-import '@/assets/scss/main.scss';
+import App from './App.vue';
+import { setupApp } from '@/utils/setupApp';
 
-const app = createApp(App)
-app.use(createPinia())
-app.mount('#app')
+setupApp( App );
