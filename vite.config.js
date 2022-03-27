@@ -8,11 +8,6 @@ import pkg from './package.json';
 export default ( { mode } ) => {
 	process.env = { ...process.env, ...loadEnv( mode, process.cwd() ) };
 	return defineConfig( {
-		server: {
-			port: 8888,
-			open: true,
-			proxy: {},
-		},
 		plugins: [
 			vue(),
 			createHtmlPlugin( {
@@ -37,11 +32,11 @@ export default ( { mode } ) => {
 		build: {
 			rollupOptions: {
 				input: {
-					// main: resolve( __dirname, 'index.html' ),
-					// 樣本----------------------/campaigns/活動名稱/----------------
-					_blank: resolve( __dirname, '/campaigns/_blank/index.html' ),
+					main: resolve( __dirname, 'index.html' ),
+					// 樣本----------------------/campaigns/活動名稱/ --> (ex：活動名稱不能以數字開頭)
+					_blank: resolve( __dirname, '/_blank/index.html' ),
 					// ------------------------------------------------------------
-					stunner2020: resolve( __dirname, '/campaigns/stunner2020/index.html' ),
+					stunner2020: resolve( __dirname, '/stunner2020/index.html' ),
 				},
 			}
 		}
