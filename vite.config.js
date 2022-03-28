@@ -33,10 +33,11 @@ export default ( { mode } ) => {
 			rollupOptions: {
 				input: {
 					main: resolve( __dirname, 'index.html' ),
-					// 樣本----------------------/campaigns/活動名稱/ --> (ex：活動名稱不能以數字開頭)
-					_blank: resolve( __dirname, '/_blank/index.html' ),
-					// ------------------------------------------------------------
+					// 樣本---------------------根目錄下的/活動名稱/ --> (ex：活動名稱不能以數開頭字和使用特殊符號)
+					biggift2020: resolve ( __dirname, '/biggift2020/index.html' ),
+					freshman2022: resolve ( __dirname, '/freshman2022/index.html' ),
 					stunner2020: resolve( __dirname, '/stunner2020/index.html' ),
+					viprules: resolve ( __dirname, '/viprules/index.html' ),
 				},
 			}
 		}
