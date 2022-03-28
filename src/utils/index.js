@@ -99,8 +99,8 @@ export function go2Profile () {
 	window.location.href = profileUrl
 }
 
-go2Bankcard( state ) {
+export function go2Bankcard( state ) {
 	const host = isMobileDevice() ? pcUrl: h5Url
 	const bankCardUrl = host + '?deepLink=xinli://atm';
 	window.location.href = bankCardUrl
-},
+}
